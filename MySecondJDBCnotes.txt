@@ -1,0 +1,9 @@
+1. 使用PreparedStatement:是statement的子接口， 可以传入带站位符的sql语句， 并且提供了补充占位符变量的方法，
+
+2. 使用PreparedStatement:
+①. 创建preparedstatement
+
+String sql = "insert into customer values (?,?,?,?)"
+preparedstatement ps = conn.preparedstatement(sql);
+
+调用preparedstatement的 setXXX(int index, Object val) 设置占位符的值
